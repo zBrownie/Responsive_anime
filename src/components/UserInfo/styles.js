@@ -29,4 +29,25 @@ export const Container = styled.div`
       margin: 4px 8px;
     }
   }
+
+  .buttons {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: #23231f;
+      cursor: pointer;
+    }
+
+    button {
+      margin: 8px 10px;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      color: #f00000;
+      cursor: pointer;
+    }
+  }
 `;

@@ -26,6 +26,7 @@ export const Container = styled.div`
     border-radius: 2px;
     padding: 20px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
 
   li.anime-item header {

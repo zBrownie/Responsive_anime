@@ -4,7 +4,7 @@ import { Container } from "./styles";
 import Star from "@material-ui/icons/Star";
 import { Link } from "react-router-dom";
 
-export default function UserInfo({ data, qtdFav }) {
+export default function UserInfo({ data, qtdFav, logout }) {
   return (
     <Container>
       <img src={data.imgUrl} alt={data.nome} />
@@ -14,7 +14,10 @@ export default function UserInfo({ data, qtdFav }) {
           <Star />
           <p>{qtdFav}</p>
         </div>
-        <Link to="/control">Lista Animes</Link>
+        <div className="buttons">
+          <Link to="/control">Lista Animes</Link>
+          <button onClick={logout}>Sair</button>
+        </div>
       </div>
     </Container>
   );

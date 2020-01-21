@@ -73,11 +73,15 @@ export default function UserPage({ history }) {
     setfavs(tempArray);
   }
 
+  async function handleSingOut() {
+    await fb.auth().signOut();
+  }
+
   return (
     <Container>
       <aside>
         <strong></strong>
-        <UserInfo data={userData} qtdFav={favs.length} />
+        <UserInfo data={userData} qtdFav={favs.length} logout={handleSingOut} />
       </aside>
       <main>
         <ListaFavoritos data={favs} remove={handleRemoveFavorito} />

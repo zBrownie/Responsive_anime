@@ -77,7 +77,13 @@ export default function Control({ history }) {
       <main>
         <ul>
           {data.map(item => (
-            <li className="anime-item" key={item.id}>
+            <li
+              className="anime-item"
+              key={item.id}
+              onClick={() => {
+                history.push(`/anime/${item.id}`);
+              }}
+            >
               <header>
                 <img src={item.img} alt={item.title} />
 

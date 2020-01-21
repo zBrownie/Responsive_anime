@@ -4,8 +4,8 @@ import fb from "../../firebase.js";
 import { Container } from "./styles";
 import PlayArrow from "@material-ui/icons/PlayArrow";
 import CalendarToday from "@material-ui/icons/CalendarToday";
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
+import Star from "@material-ui/icons/Star";
+import StarBorder from "@material-ui/icons/StarBorder";
 
 export default function AnimePage() {
   const [userData, setuserData] = useState([]);
@@ -86,9 +86,9 @@ export default function AnimePage() {
         {userData.length !== 0 ? (
           <>
             {animeFav === true ? (
-              <Favorite className="icons" onClick={handleRemoveFavorito} />
+              <Star className="icons" onClick={handleRemoveFavorito} />
             ) : (
-              <FavoriteBorder className="icons" onClick={handleAddFavorito} />
+              <StarBorder className="icons" onClick={handleAddFavorito} />
             )}
           </>
         ) : null}
