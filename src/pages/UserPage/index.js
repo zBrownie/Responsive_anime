@@ -9,6 +9,7 @@ export default function UserPage({ history }) {
   const [userData, setuserData] = useState([]);
   const [data, setdata] = useState([]);
   const [favs, setfavs] = useState([]);
+  const [userId, setuserId] = useState("");
   useEffect(() => {
     getUser();
     // getAnimes();
@@ -19,6 +20,7 @@ export default function UserPage({ history }) {
     await fb.auth().onAuthStateChanged(user => {
       if (user) {
         getDataUser(user.uid);
+        setuserId(user.uid);
       } else {
         history.push("/login");
       }
@@ -64,7 +66,7 @@ export default function UserPage({ history }) {
     await fb
       .firestore()
       .collection("users")
-      .doc("")
+      .doc(userId)
       .update({
         fav: tempArray
       });

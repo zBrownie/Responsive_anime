@@ -21,7 +21,7 @@ const Routes = () => (
       <Route exact path="/anime/:id" component={AnimePage} />
       <Route exact path="/control" component={Control} />
       <Route exact path="/editar/:animeId" component={Edit} />
-      <Route exact path="/usr/:name" component={UserPage} />
+      <Route exact path="/usr" component={UserPage} />
       <Route path="*" component={Erro} />
     </Switch>
   </Router>

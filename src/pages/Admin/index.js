@@ -14,7 +14,7 @@ export default function Admin({ history }) {
       .signInWithEmailAndPassword(loginEmail, loginSenha)
       .then(user => {
         if (user.user.uid !== null) {
-          history.push("/cadastro");
+          history.push("/usr");
         }
       });
   }
@@ -22,7 +22,7 @@ export default function Admin({ history }) {
   useEffect(() => {
     fb.auth().onAuthStateChanged(newUser => {
       if (newUser) {
-        history.push("/cadastro");
+        history.push("/usr");
       }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps

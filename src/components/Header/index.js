@@ -67,14 +67,14 @@ export default function Header({ history }) {
         <>
           {userAdmin !== true ? (
             <div className="menu-admin">
-              <Link to={`/usr/${userName}`}>{userName}</Link>
+              <Link to="/usr">{userName}</Link>
               <Link to="/login" onClick={handleSignOut}>
                 Sair
               </Link>
             </div>
           ) : (
             <div className="menu-admin">
-              <Link to={`/usr/${userName}`}>{userName}</Link>
+              <Link to="/usr">{userName}</Link>
               <Link to="/cadastro">Cadastrar</Link>
               <Link to="/control">Controle</Link>
               <Link to="/login" onClick={handleSignOut}>

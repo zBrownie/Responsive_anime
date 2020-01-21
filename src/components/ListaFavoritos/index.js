@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "./styles";
 import { Link } from "react-router-dom";
-import fb from "../../firebase.js";
+// import fb from "../../firebase.js";
 
-export default function ListaFavoritos({ data }) {
+export default function ListaFavoritos({ data, remove }) {
   return (
     <Container>
       <ul>
@@ -20,7 +20,7 @@ export default function ListaFavoritos({ data }) {
             {/* <p>{"dev.bio"}</p> */}
             <div className="acoes">
               <Link to={`/anime/${anime.id}`}>Page</Link>
-              <button>Remover</button>
+              <button onClick={() => remove(anime.id)}>Remover</button>
             </div>
           </li>
         ))}
