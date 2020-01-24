@@ -1,8 +1,8 @@
 # Desenvolvido com React Hooks com Firebase
+
 ## Otaku List
 
 
-### Projeto pessoal
 
 
  Site informa os animes que estão passando no dia, e os que estao passando na Season do ano.
