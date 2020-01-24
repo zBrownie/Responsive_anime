@@ -26,7 +26,7 @@ export const Container = styled.div`
     border-radius: 2px;
     padding: 20px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    
   }
 
   li.anime-item header {
@@ -40,6 +40,7 @@ export const Container = styled.div`
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
     margin-right: 10px;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   li.anime-item header .anime-info {
@@ -62,6 +63,7 @@ export const Container = styled.div`
     display: block;
     font-size: 16px;
     color: #333333;
+    cursor: pointer;
   }
 
   .anime-info span {

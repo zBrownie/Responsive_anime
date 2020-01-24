@@ -31,7 +31,7 @@ export const Container = styled.div`
   }
 
   .anime-dia li {
-    background: #fff;
+    
 
     border-radius: 2px;
     padding: 20px;

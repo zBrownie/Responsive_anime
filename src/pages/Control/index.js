@@ -80,22 +80,24 @@ export default function Control({ history }) {
             <li
               className="anime-item"
               key={item.id}
-              onClick={() => {
-                history.push(`/anime/${item.id}`);
-              }}
+
             >
               <header>
-                <img src={item.img} alt={item.title} />
+                <img src={item.img} alt={item.title} onClick={() => {
+                  history.push(`/anime/${item.id}`);
+                }} />
 
                 <div className="anime-info">
-                  <strong>{item.title}</strong>
+                  <strong onClick={() => {
+                    history.push(`/anime/${item.id}`);
+                  }}>{item.title}</strong>
                   <span>{item.dia}</span>
                   <span>
                     {item.streaming ? (
                       <p style={{ color: "#23231f" }}>Passando</p>
                     ) : (
-                      <p style={{ color: "#f00000" }}>Hiato</p>
-                    )}
+                        <p style={{ color: "#f00000" }}>Hiato</p>
+                      )}
                   </span>
                   {admin === true ? (
                     <div className="buttons">
