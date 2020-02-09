@@ -5,6 +5,7 @@ import { Container } from "./styles";
 import fb from "../../firebase";
 import AnimesDia from "../../components/AnimesDia";
 import AnimeSeason from "../../components/AnimeSeason";
+import WeekAnime from '../../components/WeekAnimes'
 
 export default function Home() {
   const [listDay, setListDay] = useState([]);
@@ -59,8 +60,10 @@ export default function Home() {
         <main>
           {listDay.lenght !== 0 ? <strong>Passando Hoje</strong> : null}
           <AnimesDia list={listDay} />
+          {/* 
+          <AnimeSeason list={listSeason} /> */}
           <strong className="season-title">Season</strong>
-          <AnimeSeason list={listSeason} />
+          <WeekAnime list={listSeason} />
         </main>
       </div>
     </Container>
