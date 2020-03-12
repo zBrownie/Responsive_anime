@@ -10,3 +10,12 @@
 
 
   [Otaku List](https://animeflutter.firebaseapp.com/)  
+
+
+## Nova Versão
+
+ 
+
+ [Otaku List API](https://github.com/zBrownie/otakulist-api)
+ 
+ [Otaku List](https://github.com/zBrownie/otakulist-front)
